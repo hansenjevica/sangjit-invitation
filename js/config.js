@@ -16,7 +16,7 @@ const SANGJIT_CONFIG = {
 
   event: {
     title: "Hansen & Jevica's Sangjit",
-    ceremonyNote: "Sangjit is a traditional Chinese engagement ceremony where both families exchange gifts as a symbol of blessing and commitment before the wedding.",
+    ceremonyNote: "Birds flying in the sky as one; branches growing on the earth as one.",
     dateDisplay: "Saturday, 17 October 2026",
     timeDisplay: "10:00 AM WIB",
     // ISO 8601 with UTC offset — drives the countdown + calendar button
