@@ -26,7 +26,7 @@ const SANGJIT_CONFIG = {
     venueAddress: "Ashley Hotel Jakarta, Jl. K.H. Wahid Hasyim, Jakarta Pusat, DKI Jakarta, Indonesia",
     mapsQuery: "Ashley Hotel Jakarta Wahid Hasyim",
     calendarDescription: "Sangjit ceremony — don't forget!",
-    dressCode: "Traditional Chinese attire or elegant red/pink is encouraged"
+    dressCode: "Elegant red is encouraged"
   },
 
   rsvp: {
