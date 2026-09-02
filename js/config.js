@@ -54,7 +54,7 @@ const SANGJIT_CONFIG = {
   gallery: {
     // Add file paths once photos/video are ready, e.g.
     // "assets/images/photo-01.jpg"
-    images: [],
+    images: ["assets/images/sangjit_01.jpg","assets/images/sangjit_03.jpg","assets/images/sangjit_04.jpg","assets/images/sangjit_05.jpg","assets/images/sangjit_06.jpg","assets/images/sangjit_07.jpg"],
     // "assets/video/sangjit.mp4"
     video: "",
     // A single landscape (16:9) photo shown right before "Ceremony
