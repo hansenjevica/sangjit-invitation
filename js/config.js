@@ -14,16 +14,16 @@ const SANGJIT_CONFIG = {
   event: {
     title: "Hansen & Jevica's Sangjit",
     ceremonyNote: "Sangjit is a traditional Chinese engagement ceremony where both families exchange gifts as a symbol of blessing and commitment before the wedding.",
-    dateDisplay: "Saturday, 10 October 2026",
+    dateDisplay: "Saturday, 17 October 2026",
     timeDisplay: "10:00 AM WIB",
     // ISO 8601 with UTC offset — drives the countdown + calendar button
-    dateTimeISO: "2026-10-10T10:00:00+07:00",
+    dateTimeISO: "2026-10-17T10:00:00+07:00",
     durationHours: 3,
-    venueName: "Family Residence, Gading Serpong",
-    venueAddress: "Gading Serpong, Tangerang, Banten, Indonesia",
-    mapsQuery: "Gading Serpong Tangerang",
-    calendarDescription: "Sangjit ceremony — don't forget!",
-    dressCode: "Traditional Chinese attire or elegant red/pink is encouraged"
+    venueName: "Ashley Hotel, Jakarta",
+    venueAddress: "Menteng, Jakarta Pusat, Indonesia",
+    mapsQuery: "Ashley Jakarta Wahid Hasyim",
+    calendarDescription: "Hansen and Jevica's Sangjit Ceremony",
+    dressCode: "Elegant red is encouraged"
   },
 
   rsvp: {
