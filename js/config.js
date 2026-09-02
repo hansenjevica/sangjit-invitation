@@ -59,6 +59,6 @@ const SANGJIT_CONFIG = {
     video: "",
     // A single landscape (16:9) photo shown right before "Ceremony
     // Details". Leave as "" to hide that section entirely.
-    introPhoto: "assets/images/image_01.jpg"
+    introPhoto: "assets/images/sangjit_01.jpg"
   }
 };
