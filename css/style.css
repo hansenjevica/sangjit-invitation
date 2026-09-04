@@ -240,21 +240,13 @@ h1,h2,h3,p{ margin:0; }
 .form-status.error{ background:rgba(190,80,80,.13); color:#7a3030; }
 
 /* ===================== GALLERY placeholder ===================== */
-.gallery-grid{
-  display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:26px;
-}
-.gallery-grid img{
+.gallery-placeholder{ position:relative; z-index:1; }
+.gallery-placeholder:empty{ display:none; }
+.gallery-placeholder img{
   width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:var(--radius);
-  box-shadow:var(--shadow); display:block; transition:transform .5s var(--ease);
+  box-shadow:var(--shadow); display:block; transition:transform .7s var(--ease);
 }
-.gallery-grid img:hover{ transform:scale(1.03); }
-.gallery-placeholder{
-  margin-top:26px; border:1.5px dashed rgba(140,106,58,.35); border-radius:var(--radius);
-  padding:42px 20px; text-align:center; color:var(--ink-soft); position:relative; z-index:1;
-  background:rgba(255,255,255,.35);
-}
-.gallery-placeholder svg{ width:32px; height:32px; margin:0 auto 14px; color:var(--gold-deep); }
-.gallery-placeholder p{ font-size:13.5px; line-height:1.6; }
+.gallery-placeholder img:hover{ transform:scale(1.015); }4px; color:var(--gold-deep); }
 
 /* ===================== Floating music button ===================== */
 .music-btn{
