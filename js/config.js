@@ -48,7 +48,7 @@ const SANGJIT_CONFIG = {
     scriptURL: "PASTE_YOUR_SANGJIT_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
   },
 
-  closingMessage: "With gratitude and joy, we look forward to beginning this tradition together with our families.",
+  closingMessage: "With gratitude and joy, we look forward to beginning this tradition together with our families!",
 
   music: {
     src: "assets/songs/sangjit_song.mp3"
