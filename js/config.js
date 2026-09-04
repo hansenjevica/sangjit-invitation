@@ -56,12 +56,7 @@ const SANGJIT_CONFIG = {
 
   gallery: {
     images: [
-      "assets/images/sangjit_01.jpg",
-      "assets/images/sangjit_03.jpg",
-      "assets/images/sangjit_04.jpg",
-      "assets/images/sangjit_05.jpg",
-      "assets/images/sangjit_06.jpg",
-      "assets/images/sangjit_07.jpg"
+      "assets/images/one_sangjit.png"
     ],
     // "assets/video/sangjit.mp4"
     video: "",
