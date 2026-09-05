@@ -51,7 +51,7 @@ const SANGJIT_CONFIG = {
   closingMessage: "With gratitude and joy, we look forward to beginning this tradition together with our families!",
 
   music: {
-    src: "assets/songs/sangjit_song.mp3"
+    src: "assets/sangjit_song.mp3"
   },
 
   gallery: {
