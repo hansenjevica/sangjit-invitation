@@ -1,22 +1,13 @@
 /* =====================================================================
    SANGJIT INVITATION — BEHAVIOUR
    Reads from SANGJIT_CONFIG (js/config.js). No wishes wall by design.
+   Universal link – no guest name, no lock, form resets for each entry.
    ===================================================================== */
 
 (function () {
   "use strict";
 
   const CFG = SANGJIT_CONFIG;
-
-  const params = new URLSearchParams(window.location.search);
-  const guestName = (params.get("to") || "").trim();
-  // Group links (?group=true) are meant to be shared with many people at
-  // once (e.g. blasted in a WhatsApp group) — each person submits their
-  // own RSVP from the same link, so we don't pre-fill the name or lock
-  // the form after one submission.
-  const isGroupLink = params.get("group") === "true";
-  const guestSlug = guestName ? guestName.toLowerCase().replace(/\s+/g, "-") : "guest";
-  const lockKey = `sangjit_rsvp_locked_${guestSlug}`;
 
   function setText(id, text) {
     const el = document.getElementById(id);
@@ -69,11 +60,6 @@
       img.loading = "lazy";
       featureSlot.appendChild(img);
     }
-  }
-
-  const gateGuestEl = document.getElementById("gateGuest");
-  if (guestName) {
-    gateGuestEl.innerHTML = `Dear <strong>${escapeHtml(guestName)}</strong>,<br>you are warmly invited.`;
   }
 
   if (CFG.logo) {
@@ -207,7 +193,7 @@
   document.getElementById("mapEmbed").src = `https://maps.google.com/maps?q=${mq}&z=15&output=embed`;
   document.getElementById("mapOpenLink").href = `https://www.google.com/maps/search/?api=1&query=${mq}`;
 
-  /* ---------------- RSVP (no wishes wall) ---------------- */
+  /* ---------------- RSVP (universal – no lock, resets after each submission) ---------------- */
   const form = document.getElementById("rsvpForm");
   const nameInput = document.getElementById("fName");
   const guestCountField = document.getElementById("guestCountField");
@@ -219,8 +205,7 @@
   const formStatus = document.getElementById("formStatus");
   let attendanceValue = "Attending";
 
-  if (guestName && !isGroupLink) nameInput.value = guestName;
-  if (isGroupLink) nameInput.placeholder = "Your full name";
+  // No guest name pre‑fill, no lock – just a plain form.
 
   attendanceSeg.addEventListener("click", (e) => {
     const btn = e.target.closest(".seg-btn");
@@ -235,15 +220,7 @@
     formStatus.textContent = message;
     formStatus.className = `form-status show ${kind}`;
   }
-  function lockForm(message) {
-    nameInput.disabled = true;
-    guestCountInput.disabled = true;
-    notesInput.disabled = true;
-    attendanceSeg.querySelectorAll(".seg-btn").forEach((b) => (b.disabled = true));
-    btnSubmit.disabled = true;
-    btnSubmitLabel.textContent = "RSVP Sent";
-    showStatus("success", message);
-  }
+
   function resetFormForNextEntry(message) {
     form.reset();
     nameInput.value = "";
@@ -252,10 +229,8 @@
     guestCountField.style.display = "block";
     guestCountInput.value = "1";
     showStatus("success", message);
-  }
-
-  if (!isGroupLink && localStorage.getItem(lockKey) === "true") {
-    lockForm("Thank you — we've already received your RSVP.");
+    btnSubmit.disabled = false;
+    btnSubmitLabel.textContent = "Send RSVP";
   }
 
   form.addEventListener("submit", async function (e) {
@@ -287,18 +262,13 @@
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(payload),
       });
-      if (isGroupLink) {
-        resetFormForNextEntry(`Thank you, ${name}! If another family member would like to RSVP, just fill in the form again below.`);
-      } else {
-        localStorage.setItem(lockKey, "true");
-        lockForm("Thank you! Your RSVP has been received.");
-      }
+      // Always reset the form so the next person can RSVP on the same device.
+      resetFormForNextEntry(`Thank you, ${name}! Your RSVP has been received.`);
     } catch (err) {
       showStatus("error", "Something went wrong. Please check your connection and try again.");
-    } finally {
+      btnSubmit.disabled = false;
       btnSubmit.classList.remove("loading");
       btnSubmitLabel.textContent = "Send RSVP";
-      if (isGroupLink || !localStorage.getItem(lockKey)) btnSubmit.disabled = false;
     }
   });
 
