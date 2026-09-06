@@ -39,7 +39,7 @@ body{
   
   /* ===== CHANGED: Wallpaper pattern replaced with your own image ===== */
   /* If your CSS file is inside a /css/ folder, change this path to: ../assets/images/sangjit_wallpaper.jpg */
-  background: #F5ECE6 url('https://github.com/hansenjevica/sangjit-invitation/blob/main/assets/images/sangjit_wallpaper.jpg') fixed center / cover no-repeat;
+  background: #F5ECE6 url('../assets/images/sangjit_wallpaper.jpg') fixed center / cover no-repeat;
   /* ================================================================ */
   
   -webkit-font-smoothing:antialiased;
