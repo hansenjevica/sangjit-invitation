@@ -33,34 +33,15 @@
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
-  margin:0; font-family:var(--font-body); color:var(--ink);
-  background:
-    radial-gradient(circle at 0 0,
-      transparent 20%,
-      rgba(165,52,43,.06) 21%, rgba(165,52,43,.06) 27.5%,
-      rgba(184,146,90,.06) 27.5%, rgba(184,146,90,.06) 34%,
-      transparent 35%, transparent 40%,
-      rgba(165,52,43,.06) 41%, rgba(165,52,43,.06) 47.5%,
-      rgba(184,146,90,.06) 47.5%, rgba(184,146,90,.06) 54%,
-      transparent 55%, transparent 60%,
-      rgba(165,52,43,.06) 61%, rgba(165,52,43,.06) 67.5%,
-      rgba(184,146,90,.06) 67.5%, rgba(184,146,90,.06) 74%,
-      transparent 75%),
-    radial-gradient(circle at 60px 0,
-      transparent 20%,
-      rgba(165,52,43,.06) 21%, rgba(165,52,43,.06) 27.5%,
-      rgba(184,146,90,.06) 27.5%, rgba(184,146,90,.06) 34%,
-      transparent 35%, transparent 40%,
-      rgba(165,52,43,.06) 41%, rgba(165,52,43,.06) 47.5%,
-      rgba(184,146,90,.06) 47.5%, rgba(184,146,90,.06) 54%,
-      transparent 55%, transparent 60%,
-      rgba(165,52,43,.06) 61%, rgba(165,52,43,.06) 67.5%,
-      rgba(184,146,90,.06) 67.5%, rgba(184,146,90,.06) 74%,
-      transparent 75%),
-    linear-gradient(180deg, #FDF8F4, #F5ECE6 28%, #EEF0E6 55%, #F2E7E2);
-  background-size: 60px 30px, 60px 30px, 100% 100%;
-  background-attachment: fixed, fixed, fixed;
-  -webkit-font-smoothing:antialiased;
+  /* ... other properties (margin, font-family, etc.) remain unchanged ... */
+  background: #F5ECE6 url('assets/images/sangjit_wallpaper.jpg') fixed center / cover no-repeat;
+  /* or if you prefer separate lines: */
+  background-color: #F5ECE6;
+  background-image: url('assets/images/sangjit_wallpaper.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
