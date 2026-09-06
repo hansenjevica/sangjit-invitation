@@ -34,7 +34,7 @@
 html{ scroll-behavior:smooth; }
 body{
   /* ... other properties (margin, font-family, etc.) remain unchanged ... */
-  background: #F5ECE6 url('assets/images/sangjit_wallpaper.jpg') fixed center / cover no-repeat;
+  background: #F5ECE6 url("assets/images/sangjit_wallpaper.jpg") fixed center / cover no-repeat;
   /* or if you prefer separate lines: */
   background-color: #F5ECE6;
   background-image: url('assets/images/sangjit_wallpaper.jpg');
