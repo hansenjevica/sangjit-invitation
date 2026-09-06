@@ -45,7 +45,7 @@ const SANGJIT_CONFIG = {
   rsvp: {
     // Paste the Web App URL from apps-script/Code.gs once deployed
     // (this MUST be a different Google Sheet/Script than the wedding site's)
-    scriptURL: "PASTE_YOUR_SANGJIT_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE"
+    scriptURL: "https://script.google.com/macros/s/AKfycbwwwpiawLJLdpXeAkOYbakCDBfidmBr_6nmikrpi0wfuxhn-bqQFm8gGxvA3C8TW_WG/exec"
   },
 
   closingMessage: "With gratitude and joy, we look forward to beginning this tradition together with our families!",
