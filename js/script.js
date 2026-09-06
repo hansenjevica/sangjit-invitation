@@ -1,7 +1,5 @@
 /* =====================================================================
-   SANGJIT INVITATION — BEHAVIOUR
-   Reads from SANGJIT_CONFIG (js/config.js). No wishes wall by design.
-   Universal link – no guest name, no lock, form resets for each entry.
+   SANGJIT INVITATION — BEHAVIOUR (Universal Link - No Locks)
    ===================================================================== */
 
 (function () {
@@ -88,9 +86,7 @@
 
   function tryPlayMusic() {
     if (!CFG.music || !CFG.music.src) return;
-    audio.play().then(() => musicBtn.classList.add("playing")).catch(() => {
-      /* Autoplay blocked or file missing yet — user can tap the button. */
-    });
+    audio.play().then(() => musicBtn.classList.add("playing")).catch(() => {});
   }
 
   musicBtn.addEventListener("click", () => {
@@ -193,7 +189,7 @@
   document.getElementById("mapEmbed").src = `https://maps.google.com/maps?q=${mq}&z=15&output=embed`;
   document.getElementById("mapOpenLink").href = `https://www.google.com/maps/search/?api=1&query=${mq}`;
 
-  /* ---------------- RSVP (universal – no lock, resets after each submission) ---------------- */
+  /* ---------------- RSVP (Universal – No Locks, Always Resets) ---------------- */
   const form = document.getElementById("rsvpForm");
   const nameInput = document.getElementById("fName");
   const guestCountField = document.getElementById("guestCountField");
@@ -204,8 +200,6 @@
   const btnSubmitLabel = document.getElementById("btnSubmitLabel");
   const formStatus = document.getElementById("formStatus");
   let attendanceValue = "Attending";
-
-  // No guest name pre‑fill, no lock – just a plain form.
 
   attendanceSeg.addEventListener("click", (e) => {
     const btn = e.target.closest(".seg-btn");
@@ -262,7 +256,6 @@
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(payload),
       });
-      // Always reset the form so the next person can RSVP on the same device.
       resetFormForNextEntry(`Thank you, ${name}! Your RSVP has been received.`);
     } catch (err) {
       showStatus("error", "Something went wrong. Please check your connection and try again.");
