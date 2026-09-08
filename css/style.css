@@ -37,15 +37,15 @@ body{
   font-family:var(--font-body); 
   color:var(--ink);
   
-  /* ===== CHANGED: Wallpaper with warm red-gold hues, festive but soft ===== */
-  /* Replaced with a red-toned pattern that still feels elegant and blends with blush/sage/gold */
-  background: #F5ECE6 url('../assets/images/pinkwallpaper.jpg') fixed center / cover no-repeat;
-  /* Fallback gradient with warm red undertones if image fails */
+  /* ===== CHANGED: Much redder wallpaper with visible pattern ===== */
+  /* The pattern shows through red gradients for a festive Chinese celebration feel */
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(200, 120, 110, 0.18) 0%, transparent 70%),
-    radial-gradient(ellipse at 80% 50%, rgba(180, 100, 90, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse at 50% 20%, rgba(220, 160, 140, 0.15) 0%, transparent 60%),
-    #F5ECE6 url('../assets/images/pinkwallpaper.jpg') fixed center / cover no-repeat;
+    /* Strong red glow from edges to make it feel festive */
+    radial-gradient(ellipse at 30% 20%, rgba(200, 80, 70, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(180, 60, 50, 0.30) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(220, 120, 100, 0.20) 0%, transparent 70%),
+    /* Warm red base that still lets pattern show */
+    #E8D5D0 url('../assets/images/pinkwallpaper.jpg') fixed center / cover no-repeat;
   /* ================================================================ */
   
   -webkit-font-smoothing:antialiased;
