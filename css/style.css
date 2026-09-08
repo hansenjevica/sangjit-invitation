@@ -37,9 +37,15 @@ body{
   font-family:var(--font-body); 
   color:var(--ink);
   
-  /* ===== CHANGED: Wallpaper pattern replaced with your own image ===== */
-  /* If your CSS file is inside a /css/ folder, change this path to: ../assets/images/sangjit_wallpaper.jpg */
+  /* ===== CHANGED: Wallpaper with warm red-gold hues, festive but soft ===== */
+  /* Replaced with a red-toned pattern that still feels elegant and blends with blush/sage/gold */
   background: #F5ECE6 url('../assets/images/pinkwallpaper.jpg') fixed center / cover no-repeat;
+  /* Fallback gradient with warm red undertones if image fails */
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 120, 110, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 50%, rgba(180, 100, 90, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 20%, rgba(220, 160, 140, 0.15) 0%, transparent 60%),
+    #F5ECE6 url('../assets/images/pinkwallpaper.jpg') fixed center / cover no-repeat;
   /* ================================================================ */
   
   -webkit-font-smoothing:antialiased;
