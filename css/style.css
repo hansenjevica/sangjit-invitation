@@ -948,3 +948,47 @@ h1,h2,h3,p{
     --container:640px;
   }
 }
+
+/* ===== STRONGER TEXT COLORS ===== */
+
+/* Make general grey text black */
+.section-lede,
+.hero-date,
+.hero-venue,
+.gate-guest,
+.calendar-hint,
+.closing-msg {
+  color: #000;
+}
+
+/* Stronger green */
+.hero-eyebrow,
+.gate-kicker,
+.kicker-sage,
+.fan {
+  color: #4F6D4D;
+}
+
+/* Stronger pink */
+.hero-sub,
+.section-title em {
+  color: #B85F78;
+}
+
+/* Keep text INSIDE bordered/card areas unchanged */
+.about-card,
+.detail-card,
+.countdown-card,
+.form-card,
+.map-open {
+  /* intentionally unchanged */
+}
+
+/* Closing — slightly bigger */
+.closing-msg {
+  font-size: 16.5px;
+}
+
+.closing-names {
+  font-size: 25px;
+}
