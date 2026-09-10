@@ -949,39 +949,27 @@ h1,h2,h3,p{
   }
 }
 
-/* ===== STRONGER TEXT COLORS ===== */
+/* ===== DARKER TEXT COLORS ===== */
 
-/* Make general grey text black */
 .section-lede,
 .hero-date,
 .hero-venue,
 .gate-guest,
 .calendar-hint,
 .closing-msg {
-  color: #000;
+  color: #665954; /* darker warm grey */
 }
 
-/* Stronger green */
 .hero-eyebrow,
 .gate-kicker,
 .kicker-sage,
 .fan {
-  color: #4F6D4D;
+  color: #4F6D4D; /* deeper sage green */
 }
 
-/* Stronger pink */
 .hero-sub,
 .section-title em {
-  color: #B85F78;
-}
-
-/* Keep text INSIDE bordered/card areas unchanged */
-.about-card,
-.detail-card,
-.countdown-card,
-.form-card,
-.map-open {
-  /* intentionally unchanged */
+  color: #B85F78; /* deeper blush pink */
 }
 
 /* Closing — slightly bigger */
