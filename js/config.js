@@ -21,9 +21,9 @@ const SANGJIT_CONFIG = {
     // ISO 8601 with UTC offset — drives the countdown + calendar button
     dateTimeISO: "2026-10-17T10:00:00+07:00",
     durationHours: 3,
-    venueName: "Ashley Jakarta, Wahid Hasyim",
+    venueName: "Downing Ballroom (1st floor), Ashley Jakarta, Wahid Hasyim",
     venueAddress: "Ashley Hotel Jakarta, Jl. K.H. Wahid Hasyim, Jakarta Pusat, DKI Jakarta, Indonesia",
-    mapsQuery: "Downing Ballroom (1st floor), Ashley Hotel Jakarta Wahid Hasyim",
+    mapsQuery: "Ashley Hotel Jakarta Wahid Hasyim",
     calendarDescription: "Sangjit ceremony — don't forget!",
     dressCode: "Elegant red, no batik"
   },
