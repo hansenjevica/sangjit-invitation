@@ -23,7 +23,7 @@ const SANGJIT_CONFIG = {
     durationHours: 3,
     venueName: "Ashley Jakarta, Wahid Hasyim",
     venueAddress: "Ashley Hotel Jakarta, Jl. K.H. Wahid Hasyim, Jakarta Pusat, DKI Jakarta, Indonesia",
-    mapsQuery: "Ashley Hotel Jakarta Wahid Hasyim",
+    mapsQuery: "Downing Ballroom (1st floor), Ashley Hotel Jakarta Wahid Hasyim",
     calendarDescription: "Sangjit ceremony — don't forget!",
     dressCode: "Elegant red, no batik"
   },
